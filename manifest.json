@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Video speeder",
+  "description": "This extension can increase the playrate of the videos on the page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts":[
+    {
+        "matches":["http://*/*", "https://*/*"],
+        "js":["content-script.js"],
+        "css": ["content-style.css"]
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
